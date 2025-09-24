@@ -1,0 +1,9 @@
+{
+  "database_path": "data/hookrelay.db",
+  "delivery": {
+    "max_attempts": 5,
+    "base_delay_seconds": 2,
+    "max_delay_seconds": 60,
+    "request_timeout_seconds": 5
+  }
+}
