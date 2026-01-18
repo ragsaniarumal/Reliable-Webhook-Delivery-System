@@ -1,0 +1,16 @@
+{
+  "benchmark_type": "controlled deterministic failure-recovery benchmark",
+  "events": 60,
+  "delivery_rows_after_idempotent_duplicate": 60,
+  "idempotent_duplicate_detected": true,
+  "delivered_before_manual_replay": 40,
+  "recovered_after_retry": 20,
+  "dead_lettered_before_manual_replay": 20,
+  "manual_replay_recovered_one_dead_letter": true,
+  "expected": {
+    "immediate_success": 20,
+    "retry_then_success": 20,
+    "permanent_failure": 20
+  },
+  "scope_note": "This benchmark validates retry, idempotency, dead-letter and replay logic with an injected transport. It is not a production throughput benchmark."
+}
